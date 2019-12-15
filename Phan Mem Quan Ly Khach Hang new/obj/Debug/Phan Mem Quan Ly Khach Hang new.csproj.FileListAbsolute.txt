@@ -1,0 +1,21 @@
+c:\users\bao tran\documents\visual studio 2015\Projects\Phan Mem Quan Ly Khach Hang new\Phan Mem Quan Ly Khach Hang new\bin\Debug\Phan Mem Quan Ly Khach Hang new.exe.config
+c:\users\bao tran\documents\visual studio 2015\Projects\Phan Mem Quan Ly Khach Hang new\Phan Mem Quan Ly Khach Hang new\bin\Debug\Phan Mem Quan Ly Khach Hang new.exe
+c:\users\bao tran\documents\visual studio 2015\Projects\Phan Mem Quan Ly Khach Hang new\Phan Mem Quan Ly Khach Hang new\bin\Debug\Phan Mem Quan Ly Khach Hang new.pdb
+c:\users\bao tran\documents\visual studio 2015\Projects\Phan Mem Quan Ly Khach Hang new\Phan Mem Quan Ly Khach Hang new\bin\Debug\EPPlus.dll
+c:\users\bao tran\documents\visual studio 2015\Projects\Phan Mem Quan Ly Khach Hang new\Phan Mem Quan Ly Khach Hang new\bin\Debug\EPPlus.xml
+c:\users\bao tran\documents\visual studio 2015\Projects\Phan Mem Quan Ly Khach Hang new\Phan Mem Quan Ly Khach Hang new\obj\Debug\Phan_Mem_Quan_Ly_Khach_Hang_new.Form1.resources
+c:\users\bao tran\documents\visual studio 2015\Projects\Phan Mem Quan Ly Khach Hang new\Phan Mem Quan Ly Khach Hang new\obj\Debug\Phan_Mem_Quan_Ly_Khach_Hang_new.Properties.Resources.resources
+c:\users\bao tran\documents\visual studio 2015\Projects\Phan Mem Quan Ly Khach Hang new\Phan Mem Quan Ly Khach Hang new\obj\Debug\Phan Mem Quan Ly Khach Hang new.csproj.GenerateResource.Cache
+c:\users\bao tran\documents\visual studio 2015\Projects\Phan Mem Quan Ly Khach Hang new\Phan Mem Quan Ly Khach Hang new\obj\Debug\Phan Mem Quan Ly Khach Hang new.exe
+c:\users\bao tran\documents\visual studio 2015\Projects\Phan Mem Quan Ly Khach Hang new\Phan Mem Quan Ly Khach Hang new\obj\Debug\Phan Mem Quan Ly Khach Hang new.pdb
+C:\Users\Bao Tran\documents\visual studio 2015\Projects\Phan Mem Quan Ly Khach Hang new\Phan Mem Quan Ly Khach Hang new\bin\Debug\MySql.Data.dll
+C:\Users\Bao Tran\documents\visual studio 2015\Projects\Phan Mem Quan Ly Khach Hang new\Phan Mem Quan Ly Khach Hang new\bin\Debug\Google.Protobuf.dll
+C:\Users\Bao Tran\documents\visual studio 2015\Projects\Phan Mem Quan Ly Khach Hang new\Phan Mem Quan Ly Khach Hang new\bin\Debug\BouncyCastle.Crypto.dll
+C:\Users\Bao Tran\documents\visual studio 2015\Projects\Phan Mem Quan Ly Khach Hang new\Phan Mem Quan Ly Khach Hang new\bin\Debug\Renci.SshNet.dll
+C:\Users\Bao Tran\documents\visual studio 2015\Projects\Phan Mem Quan Ly Khach Hang new\Phan Mem Quan Ly Khach Hang new\bin\Debug\MySql.Data.xml
+C:\Users\Bao Tran\documents\visual studio 2015\Projects\Phan Mem Quan Ly Khach Hang new\Phan Mem Quan Ly Khach Hang new\obj\Debug\Phan Mem Quan Ly Khach Hang new.csprojResolveAssemblyReference.cache
+C:\Users\Bao Tran\documents\visual studio 2015\Projects\Phan Mem Quan Ly Khach Hang new\Phan Mem Quan Ly Khach Hang new\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Bao Tran\documents\visual studio 2015\Projects\Phan Mem Quan Ly Khach Hang new\Phan Mem Quan Ly Khach Hang new\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Bao Tran\Documents\Visual Studio 2015\Projects\quanlykhachhang\Phan Mem Quan Ly Khach Hang new\bin\Debug\Phan Mem Quan Ly Khach Hang new.exe.config
+C:\Users\Bao Tran\Documents\Visual Studio 2015\Projects\quanlykhachhang\Phan Mem Quan Ly Khach Hang new\obj\Debug\Phan Mem Quan Ly Khach Hang new.exe
+C:\Users\Bao Tran\Documents\Visual Studio 2015\Projects\quanlykhachhang\Phan Mem Quan Ly Khach Hang new\obj\Debug\Phan Mem Quan Ly Khach Hang new.pdb
