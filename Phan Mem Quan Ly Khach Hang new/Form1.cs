@@ -96,6 +96,7 @@ namespace Phan_Mem_Quan_Ly_Khach_Hang_new
         void xem_theo_ch(string ch)
         {
             string s = "";
+            string sql = "";
             if (ch== "Phan Văn Trị")
             {
                 s = "PVT";
@@ -115,7 +116,18 @@ namespace Phan_Mem_Quan_Ly_Khach_Hang_new
             {
                 s = "LVS";
             }
-            string sql = "SELECT * FROM `Khach_Hang` WHERE Khach_Hang.code_ch='" + s + "'";
+            else if (ch == "ALL")
+            {
+                s = "1";
+            }
+            if (s == "1")
+            {
+                 sql = "SELECT * FROM `Khach_Hang` WHERE 1";
+            } else
+            {
+                 sql = "SELECT * FROM `Khach_Hang` WHERE Khach_Hang.code_ch='" + s + "'";
+            }
+           
             string sap_xep_id = "SET @'var_name' = 0;UPDATE `Khach_Hang` SET ID = (@'var_name' := @'var_name' +1);ALTER TABLE `Khach_Hang` AUTO_INCREMENT = 1";
             exedata(sap_xep_id);
             table_dulieu = readdata(sql);
@@ -252,11 +264,11 @@ namespace Phan_Mem_Quan_Ly_Khach_Hang_new
       e.RowIndex >= 0)
             {
                 groupBox1.Enabled = true;
-                txt_edit_ma_khach_hang.Text = dataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString();
-                txt_edit_ten.Text = dataGridView1.Rows[e.RowIndex].Cells[3].Value.ToString();
-                txt_edit_phone.Text = dataGridView1.Rows[e.RowIndex].Cells[5].Value.ToString();
-                txt_edit_doanh_so.Text = dataGridView1.Rows[e.RowIndex].Cells[6].Value.ToString();
-                richTextBox1.Text= dataGridView1.Rows[e.RowIndex].Cells[8].Value.ToString();
+                txt_them_ma_khach_hang.Text = dataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString();
+                txt_them_ten.Text = dataGridView1.Rows[e.RowIndex].Cells[3].Value.ToString();
+                txt_them_phone.Text = dataGridView1.Rows[e.RowIndex].Cells[5].Value.ToString();
+                txt_them_doanh_so.Text = dataGridView1.Rows[e.RowIndex].Cells[6].Value.ToString();
+                rich_them_gichu.Text= dataGridView1.Rows[e.RowIndex].Cells[8].Value.ToString();
             }
         }
 
@@ -320,10 +332,19 @@ namespace Phan_Mem_Quan_Ly_Khach_Hang_new
                 kh1.note = rich_them_gichu.Text;
                 kh1.Phone = txt_them_phone.Text;
                 kh1.ID = a.Next(200, 300);
-                xuly_tabale_vao_khach_hang();
-                list_dongbo_tren_datagriwview.Add(kh1);
-                dataGridView1.DataSource = list_dongbo_tren_datagriwview;
-                MessageBox.Show("Success");
+                string sql = "INSERT INTO `Khach_Hang`(`Ma_KH`, `Ten`, `Phone`, `Ngay_sinh`, `Doanh_so_tich_luy`, `code_ch`, `note`, `code`) VALUES ('" + txt_them_ma_khach_hang.Text + "','" + txt_them_ten.Text + "','" + txt_them_phone.Text + "','" + txt_them_ngay_sinh.Text + "','" + txt_them_doanh_so.Text + "','" + s + "','" + rich_them_gichu.Text + "','" + txt_them_code.Text + "')";
+                if (exedata(sql))
+                {
+                    MessageBox.Show("Thanh Cong");
+                }
+                else
+                {
+                    MessageBox.Show("That Bai");
+                }
+          //      xuly_tabale_vao_khach_hang();
+           //     list_dongbo_tren_datagriwview.Add(kh1);
+             //   dataGridView1.DataSource = list_dongbo_tren_datagriwview;
+               
             }
         
         }
@@ -380,7 +401,7 @@ namespace Phan_Mem_Quan_Ly_Khach_Hang_new
         }
         void xap_xep_datagriview()
         {
-            btn_sap_xep.Enabled = false;
+           // btn_sap_xep.Enabled = false;
             List<string> thutu = new List<string>();
             for(int i=0;i< dataGridView1.RowCount-1; i++)
             {
@@ -411,7 +432,7 @@ namespace Phan_Mem_Quan_Ly_Khach_Hang_new
                 
             }
             dataGridView1.Refresh();
-            btn_sap_xep.Enabled = true;
+         //   btn_sap_xep.Enabled = true;
         }
         private void btn_sap_xep_Click(object sender, EventArgs e)
         {

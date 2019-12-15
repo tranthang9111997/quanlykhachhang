@@ -69,6 +69,7 @@
             this.txt_them_ten = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
             this.txt_them_ma_khach_hang = new System.Windows.Forms.TextBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.iDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.makhDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tenDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -80,7 +81,6 @@
             this.codeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.khachhangBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.khachhangBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.btn_sap_xep = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -166,7 +166,7 @@
             // 
             // btn_xoa
             // 
-            this.btn_xoa.Location = new System.Drawing.Point(121, 281);
+            this.btn_xoa.Location = new System.Drawing.Point(973, 412);
             this.btn_xoa.Name = "btn_xoa";
             this.btn_xoa.Size = new System.Drawing.Size(95, 27);
             this.btn_xoa.TabIndex = 5;
@@ -177,7 +177,6 @@
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Controls.Add(this.btn_xoa);
             this.groupBox1.Controls.Add(this.richTextBox1);
             this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Controls.Add(this.txt_edit_code);
@@ -189,10 +188,9 @@
             this.groupBox1.Controls.Add(this.txt_edit_ten);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.txt_edit_ma_khach_hang);
-            this.groupBox1.Controls.Add(this.btn_sua);
-            this.groupBox1.Location = new System.Drawing.Point(12, 46);
+            this.groupBox1.Location = new System.Drawing.Point(650, 59);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(233, 317);
+            this.groupBox1.Size = new System.Drawing.Size(233, 392);
             this.groupBox1.TabIndex = 6;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông Tin";
@@ -297,7 +295,7 @@
             // 
             // btn_sua
             // 
-            this.btn_sua.Location = new System.Drawing.Point(17, 281);
+            this.btn_sua.Location = new System.Drawing.Point(1081, 379);
             this.btn_sua.Name = "btn_sua";
             this.btn_sua.Size = new System.Drawing.Size(82, 27);
             this.btn_sua.TabIndex = 0;
@@ -317,9 +315,9 @@
             // 
             // btn_them
             // 
-            this.btn_them.Location = new System.Drawing.Point(82, 333);
+            this.btn_them.Location = new System.Drawing.Point(973, 379);
             this.btn_them.Name = "btn_them";
-            this.btn_them.Size = new System.Drawing.Size(82, 27);
+            this.btn_them.Size = new System.Drawing.Size(95, 27);
             this.btn_them.TabIndex = 17;
             this.btn_them.Text = "Thêm";
             this.btn_them.UseVisualStyleBackColor = true;
@@ -328,7 +326,6 @@
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.cb_them_cua_hang);
-            this.groupBox2.Controls.Add(this.btn_them);
             this.groupBox2.Controls.Add(this.label14);
             this.groupBox2.Controls.Add(this.txt_them_ngay_sinh);
             this.groupBox2.Controls.Add(this.label13);
@@ -344,9 +341,9 @@
             this.groupBox2.Controls.Add(this.txt_them_ten);
             this.groupBox2.Controls.Add(this.label12);
             this.groupBox2.Controls.Add(this.txt_them_ma_khach_hang);
-            this.groupBox2.Location = new System.Drawing.Point(954, 46);
+            this.groupBox2.Location = new System.Drawing.Point(973, 46);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(239, 379);
+            this.groupBox2.Size = new System.Drawing.Size(239, 327);
             this.groupBox2.TabIndex = 17;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Thông Tin";
@@ -360,7 +357,7 @@
             "Phạm Văn Bạch",
             "Lê Văn Khương",
             "Lê Văn Sỹ"});
-            this.cb_them_cua_hang.Location = new System.Drawing.Point(82, 173);
+            this.cb_them_cua_hang.Location = new System.Drawing.Point(82, 175);
             this.cb_them_cua_hang.Name = "cb_them_cua_hang";
             this.cb_them_cua_hang.Size = new System.Drawing.Size(145, 21);
             this.cb_them_cua_hang.TabIndex = 23;
@@ -435,7 +432,7 @@
             // Code
             // 
             this.Code.AutoSize = true;
-            this.Code.Location = new System.Drawing.Point(17, 183);
+            this.Code.Location = new System.Drawing.Point(19, 178);
             this.Code.Name = "Code";
             this.Code.Size = new System.Drawing.Size(55, 13);
             this.Code.TabIndex = 10;
@@ -489,6 +486,15 @@
             this.txt_them_ma_khach_hang.Name = "txt_them_ma_khach_hang";
             this.txt_them_ma_khach_hang.Size = new System.Drawing.Size(119, 20);
             this.txt_them_ma_khach_hang.TabIndex = 1;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(1081, 412);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(82, 27);
+            this.button1.TabIndex = 18;
+            this.button1.Text = "Cancel";
+            this.button1.UseVisualStyleBackColor = true;
             // 
             // iDDataGridViewTextBoxColumn
             // 
@@ -556,22 +562,15 @@
             // 
             this.khachhangBindingSource.DataSource = typeof(Phan_Mem_Quan_Ly_Khach_Hang_new.khach_hang);
             // 
-            // btn_sap_xep
-            // 
-            this.btn_sap_xep.Location = new System.Drawing.Point(907, 48);
-            this.btn_sap_xep.Name = "btn_sap_xep";
-            this.btn_sap_xep.Size = new System.Drawing.Size(32, 17);
-            this.btn_sap_xep.TabIndex = 18;
-            this.btn_sap_xep.UseVisualStyleBackColor = true;
-            this.btn_sap_xep.Click += new System.EventHandler(this.btn_sap_xep_Click);
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1299, 463);
-            this.Controls.Add(this.btn_sap_xep);
+            this.ClientSize = new System.Drawing.Size(1299, 472);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.groupBox2);
+            this.Controls.Add(this.btn_xoa);
+            this.Controls.Add(this.btn_them);
             this.Controls.Add(this.btn_tai_len);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.btn_xem);
@@ -579,6 +578,7 @@
             this.Controls.Add(this.btn_dong_bo);
             this.Controls.Add(this.btn_nhap_file_excel);
             this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.btn_sua);
             this.Name = "Form1";
             this.Text = "Quản Lý Khách Hàng";
             this.Load += new System.EventHandler(this.Form1_Load);
@@ -647,7 +647,7 @@
         private System.Windows.Forms.TextBox txt_them_ma_khach_hang;
         private System.Windows.Forms.ComboBox cb_them_cua_hang;
         private System.Windows.Forms.BindingSource khachhangBindingSource1;
-        private System.Windows.Forms.Button btn_sap_xep;
+        private System.Windows.Forms.Button button1;
     }
 }
 
