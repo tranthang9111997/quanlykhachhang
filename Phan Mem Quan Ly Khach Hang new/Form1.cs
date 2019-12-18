@@ -20,6 +20,20 @@ namespace Phan_Mem_Quan_Ly_Khach_Hang_new
         BindingList<khach_hang> list_dongbo_tren_datagriwview = new BindingList<khach_hang>();
       // List <khach_hang> list_dongbo_tren_datagriwview = new List<khach_hang>();
         MySqlConnection conn = DBUtils.GetDBConnection();
+        void enabled_txt(bool a )
+        {
+            txt_them_code.Enabled = a;
+            txt_them_ma_khach_hang.Enabled = a;
+            txt_them_ten.Enabled = a;
+            txt_them_phone.Enabled = a;
+            txt_them_ngay_sinh.Enabled = a;
+            txt_them_doanh_so.Enabled = a;
+            cb_them_cua_hang.Enabled = a;
+            btn_xoa_server.Enabled = a;
+            btn_sua.Enabled = a;
+            // txt_them_code
+            rich_them_gichu.Enabled = a;
+        }
         void design_form()
         {
             groupBox1.Enabled = false;
@@ -29,7 +43,8 @@ namespace Phan_Mem_Quan_Ly_Khach_Hang_new
         public Form1()
         {
             InitializeComponent();
-            
+            Button b = new Button();
+            b.Click += new EventHandler(btn_xem_Click);
             ketnoi();
         }
         string tieude = "Quản Lý Khách Hàng                                                                          ";
@@ -62,10 +77,12 @@ namespace Phan_Mem_Quan_Ly_Khach_Hang_new
             openconnect();
             Boolean check = false;
             MySqlCommand sc = new MySqlCommand(cmd, conn);
-            sc.ExecuteNonQuery();
-            check = true;
             try
             {
+                sc.ExecuteNonQuery();
+           
+            check = true;
+           
               
             }
             catch (Exception)
@@ -135,7 +152,7 @@ namespace Phan_Mem_Quan_Ly_Khach_Hang_new
         }
         void them_dong_bo()
         {
-            exedata("DELETE FROM `Khach_Hang`");
+           // exedata("DELETE FROM `Khach_Hang`");
             
             foreach (khach_hang a in list_dongbo_tren_datagriwview)
             {
@@ -191,6 +208,8 @@ namespace Phan_Mem_Quan_Ly_Khach_Hang_new
 
         private void btn_xem_Click(object sender, EventArgs e)
         {
+            enabled_txt(false);
+            
             string s = cb_chon_CH.Text;
             if (s == "")
             {
@@ -205,6 +224,8 @@ namespace Phan_Mem_Quan_Ly_Khach_Hang_new
         private void Form1_Load(object sender, EventArgs e)
         {
             design_form();
+            enabled_txt(false);
+           
         }
 
         private void btn_test_Click(object sender, EventArgs e)
@@ -264,11 +285,36 @@ namespace Phan_Mem_Quan_Ly_Khach_Hang_new
       e.RowIndex >= 0)
             {
                 groupBox1.Enabled = true;
+                enabled_txt(true);
+
                 txt_them_ma_khach_hang.Text = dataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString();
                 txt_them_ten.Text = dataGridView1.Rows[e.RowIndex].Cells[3].Value.ToString();
                 txt_them_phone.Text = dataGridView1.Rows[e.RowIndex].Cells[5].Value.ToString();
                 txt_them_doanh_so.Text = dataGridView1.Rows[e.RowIndex].Cells[6].Value.ToString();
+                txt_them_ngay_sinh.Text= dataGridView1.Rows[e.RowIndex].Cells[4].Value.ToString();
+                txt_them_code.Text= dataGridView1.Rows[e.RowIndex].Cells[9].Value.ToString();
                 rich_them_gichu.Text= dataGridView1.Rows[e.RowIndex].Cells[8].Value.ToString();
+                string s = dataGridView1.Rows[e.RowIndex].Cells[7].Value.ToString();
+                if (s == "PVT")
+                {
+                    cb_them_cua_hang.SelectedIndex = 0;
+                }
+                else if (s == "CQ")
+                {
+                    cb_them_cua_hang.SelectedIndex = 1;
+                }
+                else if (s == "PVB")
+                {
+                    cb_them_cua_hang.SelectedIndex = 2;
+                }
+                else if (s == "LVK")
+                {
+                    cb_them_cua_hang.SelectedIndex = 3;
+                }
+                else if (s == "LVS")
+                {
+                    cb_them_cua_hang.SelectedIndex = 4;
+                }
             }
         }
 
@@ -294,58 +340,68 @@ namespace Phan_Mem_Quan_Ly_Khach_Hang_new
 
         private void btn_them_Click(object sender, EventArgs e)
         {
-            if (txt_them_ma_khach_hang.Text == ""|| txt_them_ten.Text==""|| cb_them_cua_hang.Text==""|| txt_them_doanh_so.Text==""|| txt_them_phone.Text=="")
+            if (txt_them_ma_khach_hang.Enabled == false)
             {
-                MessageBox.Show("Lỗi");
+                enabled_txt(true);
+                btn_sua.Enabled = false;
+                btn_xoa_server.Enabled = false;
             }
             else
             {
-                string s = "";
-                if (cb_them_cua_hang.Text == "Phan Văn Trị")
+                if (txt_them_ma_khach_hang.Text == "" || txt_them_ten.Text == "" || cb_them_cua_hang.Text == "" || txt_them_doanh_so.Text == "" || txt_them_phone.Text == "")
                 {
-                    s = "PVT";
-                }
-                else if (cb_them_cua_hang.Text == "Cống Quỳnh")
-                {
-                    s = "CQ";
-                }
-                else if (cb_them_cua_hang.Text == "Phạm Văn Bạch")
-                {
-                    s = "PVB";
-                }
-                else if (cb_them_cua_hang.Text == "Lê Văn Khương")
-                {
-                    s = "LVK";
-                }
-                else if (cb_them_cua_hang.Text == "Lê Văn Sỹ")
-                {
-                    s = "LVS";
-                }
-                khach_hang kh1 = new khach_hang();
-                Random a = new Random();
-                kh1.ma_kh = txt_them_ma_khach_hang.Text;
-                kh1.Ten = txt_them_ten.Text;
-                kh1.Ngay_Sinh = txt_them_ngay_sinh.Text;
-                kh1.code = txt_them_code.Text;
-                kh1.code_ch = s;
-                kh1.doanh_so_tich_luy = txt_them_doanh_so.Text;
-                kh1.note = rich_them_gichu.Text;
-                kh1.Phone = txt_them_phone.Text;
-                kh1.ID = a.Next(200, 300);
-                string sql = "INSERT INTO `Khach_Hang`(`Ma_KH`, `Ten`, `Phone`, `Ngay_sinh`, `Doanh_so_tich_luy`, `code_ch`, `note`, `code`) VALUES ('" + txt_them_ma_khach_hang.Text + "','" + txt_them_ten.Text + "','" + txt_them_phone.Text + "','" + txt_them_ngay_sinh.Text + "','" + txt_them_doanh_so.Text + "','" + s + "','" + rich_them_gichu.Text + "','" + txt_them_code.Text + "')";
-                if (exedata(sql))
-                {
-                    MessageBox.Show("Thanh Cong");
+                    MessageBox.Show("Lỗi");
                 }
                 else
                 {
-                    MessageBox.Show("That Bai");
+                    string s = "";
+                    if (cb_them_cua_hang.Text == "Phan Văn Trị")
+                    {
+                        s = "PVT";
+                    }
+                    else if (cb_them_cua_hang.Text == "Cống Quỳnh")
+                    {
+                        s = "CQ";
+                    }
+                    else if (cb_them_cua_hang.Text == "Phạm Văn Bạch")
+                    {
+                        s = "PVB";
+                    }
+                    else if (cb_them_cua_hang.Text == "Lê Văn Khương")
+                    {
+                        s = "LVK";
+                    }
+                    else if (cb_them_cua_hang.Text == "Lê Văn Sỹ")
+                    {
+                        s = "LVS";
+                    }
+                    khach_hang kh1 = new khach_hang();
+                    Random a = new Random();
+                    kh1.ma_kh = txt_them_ma_khach_hang.Text;
+                    kh1.Ten = txt_them_ten.Text;
+                    kh1.Ngay_Sinh = txt_them_ngay_sinh.Text;
+                    kh1.code = txt_them_code.Text;
+                    kh1.code_ch = s;
+                    kh1.doanh_so_tich_luy = txt_them_doanh_so.Text;
+                    kh1.note = rich_them_gichu.Text;
+                    kh1.Phone = txt_them_phone.Text;
+                    kh1.ID = a.Next(200, 300);
+                    string sql = "INSERT INTO `Khach_Hang`(`Ma_KH`, `Ten`, `Phone`, `Ngay_sinh`, `Doanh_so_tich_luy`, `code_ch`, `note`, `code`) VALUES ('" + txt_them_ma_khach_hang.Text + "','" + txt_them_ten.Text + "','" + txt_them_phone.Text + "','" + txt_them_ngay_sinh.Text + "','" + txt_them_doanh_so.Text + "','" + s + "','" + rich_them_gichu.Text + "','" + txt_them_code.Text + "')";
+                    if (exedata(sql))
+                    {
+                        MessageBox.Show("Thanh Cong");
+                    }
+                    else
+                    {
+                        MessageBox.Show("That Bai");
+                    }
+                    //      xuly_tabale_vao_khach_hang();
+                    //     list_dongbo_tren_datagriwview.Add(kh1);
+                    //   dataGridView1.DataSource = list_dongbo_tren_datagriwview;
+
                 }
-          //      xuly_tabale_vao_khach_hang();
-           //     list_dongbo_tren_datagriwview.Add(kh1);
-             //   dataGridView1.DataSource = list_dongbo_tren_datagriwview;
-               
             }
+            
         
         }
 
@@ -454,6 +510,62 @@ namespace Phan_Mem_Quan_Ly_Khach_Hang_new
                 dgv.Rows[rowIndex + 1].Cells[colIndex].Selected = true;
             }
             catch { }
+        }
+
+        private void btn_xoa_server_Click(object sender, EventArgs e)
+        {
+            //   string sql1 = "DELETE FROM `Khach_Hang` WHERE `Ma_KH`='CUS.TG40063.00045'";
+            DialogResult result = MessageBox.Show("Khách Hàng :"+txt_them_ten.Text, "Bạn Muốn Xóa ", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Hand, MessageBoxDefaultButton.Button2, MessageBoxOptions.ServiceNotification);
+            switch (result)
+            {
+                case DialogResult.Abort:
+                    break;
+                case DialogResult.Cancel:
+                    MessageBox.Show("Đóng messagebox nè");
+                    break;
+                case DialogResult.Ignore:
+                    break;
+                case DialogResult.No:
+                    MessageBox.Show("NO");
+                    break;
+                case DialogResult.None:
+                    break;
+                case DialogResult.OK:
+                    break;
+                case DialogResult.Retry:
+                    break;
+                case DialogResult.Yes:
+                    MessageBox.Show("Cái mới của yes");
+                    break;
+                default:
+                    break;
+            }
+            string sql = "DELETE FROM `Khach_Hang` WHERE `Ma_KH`='" + txt_them_ma_khach_hang.Text + "'";
+            if (exedata(sql))
+            {
+                MessageBox.Show("Thanh Cong");
+
+               btn_xem.Click += new EventHandler(btn_xem_Click);
+              //  EventArgs ee = new EventArgs();
+                btn_xem_Click(btn_xem, e);
+
+
+            }
+            else
+            {
+                MessageBox.Show("That Bai");
+            }
+        }
+        void button_them_sua_xoa(bool a)
+        {
+            btn_them.Enabled = a;
+            btn_sua.Enabled = a;
+            btn_xoa.Enabled = a;
+        }
+        private void button1_Click_2(object sender, EventArgs e)
+        {
+            button_them_sua_xoa(true);
+            btn_cancel.Enabled = false;
         }
     }
 }

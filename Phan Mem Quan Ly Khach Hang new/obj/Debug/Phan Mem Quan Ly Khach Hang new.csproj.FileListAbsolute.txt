@@ -33,3 +33,4 @@ C:\Users\Bao Tran\Documents\Visual Studio 2015\Projects\quanlykhachhang\Phan Mem
 C:\Users\Bao Tran\Documents\Visual Studio 2015\Projects\quanlykhachhang\Phan Mem Quan Ly Khach Hang new\obj\Debug\Phan_Mem_Quan_Ly_Khach_Hang_new.Form1.resources
 C:\Users\Bao Tran\Documents\Visual Studio 2015\Projects\quanlykhachhang\Phan Mem Quan Ly Khach Hang new\obj\Debug\Phan_Mem_Quan_Ly_Khach_Hang_new.Properties.Resources.resources
 C:\Users\Bao Tran\Documents\Visual Studio 2015\Projects\quanlykhachhang\Phan Mem Quan Ly Khach Hang new\obj\Debug\Phan Mem Quan Ly Khach Hang new.csproj.GenerateResource.Cache
+C:\Users\Bao Tran\Documents\Visual Studio 2015\Projects\quanlykhachhang\Phan Mem Quan Ly Khach Hang new\obj\Debug\Phan_Mem_Quan_Ly_Khach_Hang_new.Form2.resources

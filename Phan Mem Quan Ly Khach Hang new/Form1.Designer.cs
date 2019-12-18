@@ -35,7 +35,6 @@
             this.btn_dong_bo = new System.Windows.Forms.Button();
             this.cb_chon_CH = new System.Windows.Forms.ComboBox();
             this.btn_xem = new System.Windows.Forms.Button();
-            this.btn_xoa = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label3 = new System.Windows.Forms.Label();
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
@@ -69,7 +68,11 @@
             this.txt_them_ten = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
             this.txt_them_ma_khach_hang = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btn_cancel = new System.Windows.Forms.Button();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.btn_xoa_server = new System.Windows.Forms.Button();
+            this.btn_xoa = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.iDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.makhDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tenDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -81,11 +84,31 @@
             this.codeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.khachhangBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.khachhangBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.openToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.exportFileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.đồngBộToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.tảiLênToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.xóaHếtToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.backupToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.sToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.allToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.theoCửaHàngToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.phanVănTrịToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.cốngQuỳnhToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.phạmVănBạchToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.lêVănKhươngToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.lêVănSỹToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
+            this.groupBox3.SuspendLayout();
+            this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.khachhangBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.khachhangBindingSource)).BeginInit();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // dataGridView1
@@ -105,10 +128,11 @@
             this.noteDataGridViewTextBoxColumn,
             this.codeDataGridViewTextBoxColumn});
             this.dataGridView1.DataSource = this.khachhangBindingSource1;
-            this.dataGridView1.Location = new System.Drawing.Point(251, 46);
+            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.dataGridView1.Location = new System.Drawing.Point(0, 0);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(697, 379);
+            this.dataGridView1.Size = new System.Drawing.Size(676, 452);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
@@ -121,7 +145,7 @@
             // 
             // btn_nhap_file_excel
             // 
-            this.btn_nhap_file_excel.Location = new System.Drawing.Point(8, 8);
+            this.btn_nhap_file_excel.Location = new System.Drawing.Point(8, 43);
             this.btn_nhap_file_excel.Name = "btn_nhap_file_excel";
             this.btn_nhap_file_excel.Size = new System.Drawing.Size(113, 32);
             this.btn_nhap_file_excel.TabIndex = 1;
@@ -131,7 +155,7 @@
             // 
             // btn_dong_bo
             // 
-            this.btn_dong_bo.Location = new System.Drawing.Point(252, 8);
+            this.btn_dong_bo.Location = new System.Drawing.Point(252, 52);
             this.btn_dong_bo.Name = "btn_dong_bo";
             this.btn_dong_bo.Size = new System.Drawing.Size(103, 32);
             this.btn_dong_bo.TabIndex = 2;
@@ -149,30 +173,20 @@
             "Phạm Văn Bạch",
             "Lê Văn Khương",
             "Lê Văn Sỹ"});
-            this.cb_chon_CH.Location = new System.Drawing.Point(460, 15);
+            this.cb_chon_CH.Location = new System.Drawing.Point(162, 3);
             this.cb_chon_CH.Name = "cb_chon_CH";
             this.cb_chon_CH.Size = new System.Drawing.Size(121, 21);
             this.cb_chon_CH.TabIndex = 3;
             // 
             // btn_xem
             // 
-            this.btn_xem.Location = new System.Drawing.Point(361, 8);
+            this.btn_xem.Location = new System.Drawing.Point(382, 52);
             this.btn_xem.Name = "btn_xem";
             this.btn_xem.Size = new System.Drawing.Size(93, 32);
             this.btn_xem.TabIndex = 4;
             this.btn_xem.Text = "Xem";
             this.btn_xem.UseVisualStyleBackColor = true;
             this.btn_xem.Click += new System.EventHandler(this.btn_xem_Click);
-            // 
-            // btn_xoa
-            // 
-            this.btn_xoa.Location = new System.Drawing.Point(973, 412);
-            this.btn_xoa.Name = "btn_xoa";
-            this.btn_xoa.Size = new System.Drawing.Size(95, 27);
-            this.btn_xoa.TabIndex = 5;
-            this.btn_xoa.Text = "Xóa";
-            this.btn_xoa.UseVisualStyleBackColor = true;
-            this.btn_xoa.Click += new System.EventHandler(this.btn_xoa_Click);
             // 
             // groupBox1
             // 
@@ -188,12 +202,13 @@
             this.groupBox1.Controls.Add(this.txt_edit_ten);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.txt_edit_ma_khach_hang);
-            this.groupBox1.Location = new System.Drawing.Point(650, 59);
+            this.groupBox1.Location = new System.Drawing.Point(13, 90);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(233, 392);
+            this.groupBox1.Size = new System.Drawing.Size(233, 288);
             this.groupBox1.TabIndex = 6;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông Tin";
+            this.groupBox1.Visible = false;
             this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
             // label3
@@ -295,17 +310,17 @@
             // 
             // btn_sua
             // 
-            this.btn_sua.Location = new System.Drawing.Point(1081, 379);
+            this.btn_sua.Location = new System.Drawing.Point(145, 28);
             this.btn_sua.Name = "btn_sua";
             this.btn_sua.Size = new System.Drawing.Size(82, 27);
-            this.btn_sua.TabIndex = 0;
+            this.btn_sua.TabIndex = 10;
             this.btn_sua.Text = "Sửa";
             this.btn_sua.UseVisualStyleBackColor = true;
             this.btn_sua.Click += new System.EventHandler(this.btn_sua_Click);
             // 
             // btn_tai_len
             // 
-            this.btn_tai_len.Location = new System.Drawing.Point(133, 8);
+            this.btn_tai_len.Location = new System.Drawing.Point(133, 52);
             this.btn_tai_len.Name = "btn_tai_len";
             this.btn_tai_len.Size = new System.Drawing.Size(113, 32);
             this.btn_tai_len.TabIndex = 7;
@@ -315,10 +330,10 @@
             // 
             // btn_them
             // 
-            this.btn_them.Location = new System.Drawing.Point(973, 379);
+            this.btn_them.Location = new System.Drawing.Point(37, 28);
             this.btn_them.Name = "btn_them";
             this.btn_them.Size = new System.Drawing.Size(95, 27);
-            this.btn_them.TabIndex = 17;
+            this.btn_them.TabIndex = 9;
             this.btn_them.Text = "Thêm";
             this.btn_them.UseVisualStyleBackColor = true;
             this.btn_them.Click += new System.EventHandler(this.btn_them_Click);
@@ -341,9 +356,9 @@
             this.groupBox2.Controls.Add(this.txt_them_ten);
             this.groupBox2.Controls.Add(this.label12);
             this.groupBox2.Controls.Add(this.txt_them_ma_khach_hang);
-            this.groupBox2.Location = new System.Drawing.Point(973, 46);
+            this.groupBox2.Location = new System.Drawing.Point(8, 90);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(239, 327);
+            this.groupBox2.Size = new System.Drawing.Size(251, 327);
             this.groupBox2.TabIndex = 17;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Thông Tin";
@@ -357,10 +372,10 @@
             "Phạm Văn Bạch",
             "Lê Văn Khương",
             "Lê Văn Sỹ"});
-            this.cb_them_cua_hang.Location = new System.Drawing.Point(82, 175);
+            this.cb_them_cua_hang.Location = new System.Drawing.Point(82, 171);
             this.cb_them_cua_hang.Name = "cb_them_cua_hang";
             this.cb_them_cua_hang.Size = new System.Drawing.Size(145, 21);
-            this.cb_them_cua_hang.TabIndex = 23;
+            this.cb_them_cua_hang.TabIndex = 6;
             // 
             // label14
             // 
@@ -376,7 +391,7 @@
             this.txt_them_ngay_sinh.Location = new System.Drawing.Point(82, 109);
             this.txt_them_ngay_sinh.Name = "txt_them_ngay_sinh";
             this.txt_them_ngay_sinh.Size = new System.Drawing.Size(145, 20);
-            this.txt_them_ngay_sinh.TabIndex = 21;
+            this.txt_them_ngay_sinh.TabIndex = 4;
             // 
             // label13
             // 
@@ -392,7 +407,7 @@
             this.txt_them_doanh_so.Location = new System.Drawing.Point(82, 141);
             this.txt_them_doanh_so.Name = "txt_them_doanh_so";
             this.txt_them_doanh_so.Size = new System.Drawing.Size(145, 20);
-            this.txt_them_doanh_so.TabIndex = 19;
+            this.txt_them_doanh_so.TabIndex = 5;
             this.txt_them_doanh_so.TextChanged += new System.EventHandler(this.txt_them_doanh_so_TextChanged);
             this.txt_them_doanh_so.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_them_doanh_so_KeyPress);
             // 
@@ -410,7 +425,7 @@
             this.rich_them_gichu.Location = new System.Drawing.Point(20, 251);
             this.rich_them_gichu.Name = "rich_them_gichu";
             this.rich_them_gichu.Size = new System.Drawing.Size(207, 66);
-            this.rich_them_gichu.TabIndex = 15;
+            this.rich_them_gichu.TabIndex = 8;
             this.rich_them_gichu.Text = "";
             // 
             // label8
@@ -427,7 +442,7 @@
             this.txt_them_code.Location = new System.Drawing.Point(82, 206);
             this.txt_them_code.Name = "txt_them_code";
             this.txt_them_code.Size = new System.Drawing.Size(145, 20);
-            this.txt_them_code.TabIndex = 11;
+            this.txt_them_code.TabIndex = 7;
             // 
             // Code
             // 
@@ -449,10 +464,10 @@
             // 
             // txt_them_phone
             // 
-            this.txt_them_phone.Location = new System.Drawing.Point(77, 77);
+            this.txt_them_phone.Location = new System.Drawing.Point(82, 77);
             this.txt_them_phone.Name = "txt_them_phone";
-            this.txt_them_phone.Size = new System.Drawing.Size(150, 20);
-            this.txt_them_phone.TabIndex = 7;
+            this.txt_them_phone.Size = new System.Drawing.Size(145, 20);
+            this.txt_them_phone.TabIndex = 3;
             this.txt_them_phone.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_them_phone_KeyPress);
             // 
             // label11
@@ -469,7 +484,7 @@
             this.txt_them_ten.Location = new System.Drawing.Point(49, 45);
             this.txt_them_ten.Name = "txt_them_ten";
             this.txt_them_ten.Size = new System.Drawing.Size(178, 20);
-            this.txt_them_ten.TabIndex = 3;
+            this.txt_them_ten.TabIndex = 2;
             // 
             // label12
             // 
@@ -487,14 +502,56 @@
             this.txt_them_ma_khach_hang.Size = new System.Drawing.Size(119, 20);
             this.txt_them_ma_khach_hang.TabIndex = 1;
             // 
-            // button1
+            // btn_cancel
             // 
-            this.button1.Location = new System.Drawing.Point(1081, 412);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(82, 27);
-            this.button1.TabIndex = 18;
-            this.button1.Text = "Cancel";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btn_cancel.Location = new System.Drawing.Point(145, 61);
+            this.btn_cancel.Name = "btn_cancel";
+            this.btn_cancel.Size = new System.Drawing.Size(82, 27);
+            this.btn_cancel.TabIndex = 12;
+            this.btn_cancel.Text = "Cancel";
+            this.btn_cancel.UseVisualStyleBackColor = true;
+            this.btn_cancel.Click += new System.EventHandler(this.button1_Click_2);
+            // 
+            // groupBox3
+            // 
+            this.groupBox3.Controls.Add(this.btn_xoa_server);
+            this.groupBox3.Controls.Add(this.btn_sua);
+            this.groupBox3.Controls.Add(this.btn_cancel);
+            this.groupBox3.Controls.Add(this.btn_them);
+            this.groupBox3.Location = new System.Drawing.Point(8, 423);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(251, 119);
+            this.groupBox3.TabIndex = 19;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "groupBox3";
+            // 
+            // btn_xoa_server
+            // 
+            this.btn_xoa_server.Location = new System.Drawing.Point(37, 61);
+            this.btn_xoa_server.Name = "btn_xoa_server";
+            this.btn_xoa_server.Size = new System.Drawing.Size(95, 27);
+            this.btn_xoa_server.TabIndex = 11;
+            this.btn_xoa_server.Text = "Xóa";
+            this.btn_xoa_server.UseVisualStyleBackColor = true;
+            this.btn_xoa_server.Click += new System.EventHandler(this.btn_xoa_server_Click);
+            // 
+            // btn_xoa
+            // 
+            this.btn_xoa.Location = new System.Drawing.Point(857, 543);
+            this.btn_xoa.Name = "btn_xoa";
+            this.btn_xoa.Size = new System.Drawing.Size(95, 27);
+            this.btn_xoa.TabIndex = 5;
+            this.btn_xoa.Text = "Xóa datagrv";
+            this.btn_xoa.UseVisualStyleBackColor = true;
+            this.btn_xoa.Click += new System.EventHandler(this.btn_xoa_Click);
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.dataGridView1);
+            this.panel1.Location = new System.Drawing.Point(276, 90);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(654, 452);
+            this.panel1.TabIndex = 20;
             // 
             // iDDataGridViewTextBoxColumn
             // 
@@ -562,23 +619,149 @@
             // 
             this.khachhangBindingSource.DataSource = typeof(Phan_Mem_Quan_Ly_Khach_Hang_new.khach_hang);
             // 
+            // menuStrip1
+            // 
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.fileToolStripMenuItem,
+            this.đồngBộToolStripMenuItem,
+            this.sToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(997, 24);
+            this.menuStrip1.TabIndex = 21;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
+            // fileToolStripMenuItem
+            // 
+            this.fileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.openToolStripMenuItem,
+            this.exportFileToolStripMenuItem});
+            this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
+            this.fileToolStripMenuItem.Size = new System.Drawing.Size(37, 20);
+            this.fileToolStripMenuItem.Text = "File";
+            // 
+            // openToolStripMenuItem
+            // 
+            this.openToolStripMenuItem.Name = "openToolStripMenuItem";
+            this.openToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.openToolStripMenuItem.Text = "Open";
+            // 
+            // exportFileToolStripMenuItem
+            // 
+            this.exportFileToolStripMenuItem.Name = "exportFileToolStripMenuItem";
+            this.exportFileToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.exportFileToolStripMenuItem.Text = "Export File";
+            // 
+            // đồngBộToolStripMenuItem
+            // 
+            this.đồngBộToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.backupToolStripMenuItem,
+            this.tảiLênToolStripMenuItem,
+            this.xóaHếtToolStripMenuItem});
+            this.đồngBộToolStripMenuItem.Name = "đồngBộToolStripMenuItem";
+            this.đồngBộToolStripMenuItem.Size = new System.Drawing.Size(65, 20);
+            this.đồngBộToolStripMenuItem.Text = "Đồng Bộ";
+            // 
+            // tảiLênToolStripMenuItem
+            // 
+            this.tảiLênToolStripMenuItem.Name = "tảiLênToolStripMenuItem";
+            this.tảiLênToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.tảiLênToolStripMenuItem.Text = "Tải Lên";
+            // 
+            // xóaHếtToolStripMenuItem
+            // 
+            this.xóaHếtToolStripMenuItem.Name = "xóaHếtToolStripMenuItem";
+            this.xóaHếtToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.xóaHếtToolStripMenuItem.Text = "Xóa Hết";
+            // 
+            // backupToolStripMenuItem
+            // 
+            this.backupToolStripMenuItem.Name = "backupToolStripMenuItem";
+            this.backupToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.backupToolStripMenuItem.Text = "Backup";
+            // 
+            // sToolStripMenuItem
+            // 
+            this.sToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.allToolStripMenuItem,
+            this.theoCửaHàngToolStripMenuItem,
+            this.toolStripMenuItem1});
+            this.sToolStripMenuItem.Name = "sToolStripMenuItem";
+            this.sToolStripMenuItem.Size = new System.Drawing.Size(54, 20);
+            this.sToolStripMenuItem.Text = "Search";
+            // 
+            // allToolStripMenuItem
+            // 
+            this.allToolStripMenuItem.Name = "allToolStripMenuItem";
+            this.allToolStripMenuItem.Size = new System.Drawing.Size(156, 22);
+            this.allToolStripMenuItem.Text = "All";
+            // 
+            // theoCửaHàngToolStripMenuItem
+            // 
+            this.theoCửaHàngToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.phanVănTrịToolStripMenuItem,
+            this.cốngQuỳnhToolStripMenuItem,
+            this.phạmVănBạchToolStripMenuItem,
+            this.lêVănKhươngToolStripMenuItem,
+            this.lêVănSỹToolStripMenuItem});
+            this.theoCửaHàngToolStripMenuItem.Name = "theoCửaHàngToolStripMenuItem";
+            this.theoCửaHàngToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.theoCửaHàngToolStripMenuItem.Text = "Theo Cửa Hàng";
+            // 
+            // phanVănTrịToolStripMenuItem
+            // 
+            this.phanVănTrịToolStripMenuItem.Name = "phanVănTrịToolStripMenuItem";
+            this.phanVănTrịToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.phanVănTrịToolStripMenuItem.Text = "Phan Văn Trị";
+            // 
+            // cốngQuỳnhToolStripMenuItem
+            // 
+            this.cốngQuỳnhToolStripMenuItem.Name = "cốngQuỳnhToolStripMenuItem";
+            this.cốngQuỳnhToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.cốngQuỳnhToolStripMenuItem.Text = "Cống Quỳnh";
+            // 
+            // phạmVănBạchToolStripMenuItem
+            // 
+            this.phạmVănBạchToolStripMenuItem.Name = "phạmVănBạchToolStripMenuItem";
+            this.phạmVănBạchToolStripMenuItem.Size = new System.Drawing.Size(156, 22);
+            this.phạmVănBạchToolStripMenuItem.Text = "Phạm Văn Bạch";
+            // 
+            // lêVănKhươngToolStripMenuItem
+            // 
+            this.lêVănKhươngToolStripMenuItem.Name = "lêVănKhươngToolStripMenuItem";
+            this.lêVănKhươngToolStripMenuItem.Size = new System.Drawing.Size(156, 22);
+            this.lêVănKhươngToolStripMenuItem.Text = "Lê Văn Khương";
+            // 
+            // lêVănSỹToolStripMenuItem
+            // 
+            this.lêVănSỹToolStripMenuItem.Name = "lêVănSỹToolStripMenuItem";
+            this.lêVănSỹToolStripMenuItem.Size = new System.Drawing.Size(156, 22);
+            this.lêVănSỹToolStripMenuItem.Text = "Lê Văn Sỹ";
+            // 
+            // toolStripMenuItem1
+            // 
+            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.toolStripMenuItem1.Text = "toolStripMenuItem1";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1299, 472);
-            this.Controls.Add(this.button1);
+            this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.ClientSize = new System.Drawing.Size(997, 611);
+            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
-            this.Controls.Add(this.btn_xoa);
-            this.Controls.Add(this.btn_them);
             this.Controls.Add(this.btn_tai_len);
             this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.btn_xoa);
             this.Controls.Add(this.btn_xem);
             this.Controls.Add(this.cb_chon_CH);
             this.Controls.Add(this.btn_dong_bo);
             this.Controls.Add(this.btn_nhap_file_excel);
-            this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.btn_sua);
+            this.Controls.Add(this.menuStrip1);
+            this.MainMenuStrip = this.menuStrip1;
             this.Name = "Form1";
             this.Text = "Quản Lý Khách Hàng";
             this.Load += new System.EventHandler(this.Form1_Load);
@@ -587,9 +770,14 @@
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
+            this.groupBox3.ResumeLayout(false);
+            this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.khachhangBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.khachhangBindingSource)).EndInit();
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -602,7 +790,6 @@
         private System.Windows.Forms.Button btn_xem;
         private System.Windows.Forms.DataGridViewTextBoxColumn hotenDataGridViewTextBoxColumn;
         private System.Windows.Forms.BindingSource khachhangBindingSource;
-        private System.Windows.Forms.Button btn_xoa;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.DataGridViewButtonColumn checkbock;
         private System.Windows.Forms.DataGridViewTextBoxColumn iDDataGridViewTextBoxColumn;
@@ -647,7 +834,28 @@
         private System.Windows.Forms.TextBox txt_them_ma_khach_hang;
         private System.Windows.Forms.ComboBox cb_them_cua_hang;
         private System.Windows.Forms.BindingSource khachhangBindingSource1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btn_cancel;
+        private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.Button btn_xoa_server;
+        private System.Windows.Forms.Button btn_xoa;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem fileToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem openToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem exportFileToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem đồngBộToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem backupToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem tảiLênToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem xóaHếtToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem sToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem allToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem theoCửaHàngToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem phanVănTrịToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem cốngQuỳnhToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem phạmVănBạchToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem lêVănKhươngToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem lêVănSỹToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
     }
 }
 
